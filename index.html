@@ -83,7 +83,7 @@
 
     <!-- Add your site or application content here -->
     <div id="top" class="jumbotron">
-      <div class="container d-flex h-100">
+      <div class="container d-sm-flex h-100">
         <div class="col-lg-5 col-md-4 align-self-center">
           <img
             src="img/profile.jpg"
@@ -157,7 +157,8 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="#profile">Profile</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#stats">Stats</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -427,9 +428,11 @@
 
     <!-- stats -->
     <div id="stats" class="container py-4">
-      <h3 class="mt-5">Stats</h3>
+      <h2>Stats</h2>
       <hr />
 
+      <h3 class="mt-5">Coding Stats</h3>
+      <hr />
       <div class="row">
         <div class="col-lg-3 col-sm-6 col-8 offset-sm-0 offset-2">
           <div class="circle">
@@ -484,7 +487,9 @@
         </div>
       </div>
       
-      <div class="calendar">
+      <h3 class="mt-5">Github Contribution</h3>
+      <hr />
+      <div class="calendar mb-5">
         Loading the data just for you.
       </div>
 
@@ -494,59 +499,6 @@
         GitHubCalendar(".calendar", "akamit21", { responsive: true });
       </script>
     </div>
-
-    <!-- <div class="bg-dark py-5">
-      <div id="contact" class="container">
-        <h2>Contact</h2>
-        <hr />
-
-        <div class="row">
-          <div class="col-md-6">
-            <ul class="no-bullets">
-              <li>
-                <a href="https://twitter.com/Amitaldo" target="_blank">
-                  <span class="icon icon-twitter"></span>
-                  https://twitter.com/Amitaldo
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/akamit21/" target="_blank">
-                  <span class="icon icon-linkedin"></span>
-                  https://www.linkedin.com/in/akamit21/
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <ul class="no-bullets">
-              <li>
-                <a href="javascript:void(0);">
-                  <span class="icon icon-skype"></span> live:akamit21
-                </a>
-              </li>
-              <li>
-                <a href="mailto:akamit21@outlook.com">
-                  <span class="icon icon-email"></span> akamit21@outlook.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <hr />
-        <a
-          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-          class="twitter-share-button"
-          data-show-count="false"
-          >Tweet</a
-        >
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script>
-      </div>
-    </div> -->
 
     <!-- script -->
     <script src="vendor/jquery/modernizr-3.6.0.min.js"></script>
