@@ -117,19 +117,6 @@ h6 {
   color: #343a40;
 }
 
-h1 {
-  font-size: 5rem;
-  line-height: 5rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
-}
 .text-color {
   color: #22a39f;
 }
@@ -173,10 +160,7 @@ p.lead {
   margin-bottom: 5px;
 }
 
-/**
- * Circle Styles
- */
-
+/* stats */
 .circle {
   position: relative;
   display: block;
@@ -196,7 +180,7 @@ p.lead {
   content: "";
 }
 
-.circle__inner {
+.circle-inner {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -205,16 +189,40 @@ p.lead {
   height: 100%;
 }
 
-.circle__wrapper {
+.circle-wrapper {
   display: table;
   width: 100%;
   height: 100%;
 }
 
-.circle__content {
+.circle-content {
   display: table-cell;
   padding: 1em;
   vertical-align: middle;
+}
+.circle-content > span {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+/* media query */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p.lead {
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
 }
 
 /* ==========================================================================
