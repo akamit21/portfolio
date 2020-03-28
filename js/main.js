@@ -2,42 +2,28 @@ var lnStickyNavigation;
 
 $(document).ready(function() {
   applyHeader();
-  applyNavigation();
-  applyMailTo();
+  // applyNavigation();
   applyResize();
-  checkHash();
 });
 
 /* HEADER FUNCTIONS */
 
 function applyHeader() {
-  $(".jumbotron").css({
-    height: $(window).height() + "px"
-  });
-
-  lazyLoad($(".jumbotron"));
-}
-
-function lazyLoad(poContainer) {
-  /*var lstrSource   = poContainer.attr('data-src');
-	var lstrPosition = poContainer.attr('data-position');
-
-	$('<img>').attr('src', lstrSource).load(function()
-	{
-		poContainer.css('background-image', 'url("'+ lstrSource +'")');
-		poContainer.css('background-position', lstrPosition);
-		poContainer.css('-ms-filter', '"progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\'' + lstrSource + '\', sizingMethod=\'scale\')"');
-		poContainer.css('filter', 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\'' + lstrSource + '\', sizingMethod=\'scale\'');
-	});*/
+  let w = $(window).width();
+  if (w >= 992) {
+    $(".jumbotron").css({
+      height: $(window).height() + "px"
+    });
+  }
 }
 
 /* NAVIGATION FUNCTIONS */
 
 function applyNavigation() {
   applyClickEvent();
-  applyNavigationFixForPhone();
+  // applyNavigationFixForPhone();
   applyScrollSpy();
-  applyStickyNavigation();
+  // applyStickyNavigation();
 }
 
 function applyClickEvent() {
@@ -90,23 +76,6 @@ function stickyNavigation() {
   }
 }
 
-/* MAILTO FUNCTION */
-
-function applyMailTo() {
-  $("a[href*=mailto]").on("click", function(e) {
-    var lstrEmail = $(this)
-      .attr("href")
-      .replace("mailto:", "");
-
-    lstrEmail = lstrEmail
-      .split("")
-      .reverse()
-      .join("");
-
-    $(this).attr("href", "mailto:" + lstrEmail);
-  });
-}
-
 /* RESIZE FUNCTION */
 
 function applyResize() {
@@ -117,14 +86,4 @@ function applyResize() {
       height: $(window).height() + "px"
     });
   });
-}
-
-/* HASH FUNCTION */
-
-function checkHash() {
-  lstrHash = window.location.hash.replace("#/", "#");
-
-  if ($("a[href=\\" + lstrHash + "]").length > 0) {
-    $("a[href=\\" + lstrHash + "]").trigger("click");
-  }
 }
