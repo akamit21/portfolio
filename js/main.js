@@ -2,7 +2,7 @@ var lnStickyNavigation;
 
 $(document).ready(function() {
   applyHeader();
-  // applyNavigation();
+  applyNavigation();
   applyResize();
 });
 
@@ -21,9 +21,9 @@ function applyHeader() {
 
 function applyNavigation() {
   applyClickEvent();
-  // applyNavigationFixForPhone();
+  applyNavigationFixForPhone();
   applyScrollSpy();
-  // applyStickyNavigation();
+  applyStickyNavigation();
 }
 
 function applyClickEvent() {
@@ -35,7 +35,7 @@ function applyClickEvent() {
         {
           scrollTop: $($.attr(this, "href")).offset().top
         },
-        400
+        1000
       );
     }
     return false;
